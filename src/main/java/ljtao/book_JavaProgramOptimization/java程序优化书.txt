@@ -1,0 +1,7 @@
+一、
+1、c_1_string 包 ：代表的是“第三章，第一节的字符串优化处理”
+	a、字符串的分隔与查询：split方法，StringTokenizer类，charAt(),indexOf(),startsWith(),endsWith()
+	b、字符串的拼接：StringBuffer,方法有同步锁 ; StringBuilder
+2、c_2_list包：代表是的“数据结构”章节
+3、HashSet是对HashMap封装的，因此有关HashSet一切性能和实现细节与HashMap完全相同.
+d_3_并发数据结构：主要都是讲jdk实现的并发数据结构类，只要会用就行了，还有一个自己实现统计线程池类。、

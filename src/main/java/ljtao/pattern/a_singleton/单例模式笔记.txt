@@ -1,0 +1,2 @@
+1、Singleton类，用getSingleton方法，获得的是单例对象
+2、Test，用多线程来测试，获得的对象是否为单例。

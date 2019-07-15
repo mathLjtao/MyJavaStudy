@@ -1,0 +1,32 @@
+package ljtao.test;
+
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+public class Test {
+	public static void main(String[] args) {
+		//fun1();
+		String[] s=new String[]{"a","b","c"};
+		List<String> strings = Arrays.asList(s);
+		System.out.println(strings.toString());
+
+	}
+	public static void fun1(){
+		List<String> list =new ArrayList<String>();
+		Collections.addAll(list, "a","b");
+		System.out.println(list);
+		System.out.println(7>>1);
+	}
+	public static void fun2() {
+		//1552031777 oa过来的时间戳需要在后面加上3个0
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date=new Date(new Long("1553070078000"));
+		//Date date=new Date(new Long("1552950001000"));
+		System.out.println(sdf.format(1553070078000L));
+		Long systime = new Date().getTime();
+		Long time= new Long("1553070078000");
+		System.out.println(systime/1000-time/1000);
+		System.out.println(sdf.format(new Date()));
+	}
+}
+

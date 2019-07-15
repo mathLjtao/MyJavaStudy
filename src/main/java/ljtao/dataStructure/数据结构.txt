@@ -1,0 +1,9 @@
+一、list包下的
+1、IList:		表接口
+2、MyList：		顺序表的实现
+3、LinkList：		单链表的实现
+4、DoubleLink 	双向链表的实现
+5、MyStack 		栈的实现
+6、ArrayQueue	数组（顺序存储）实现的队列
+7、LinkQueue		链式存储实现的队列
+

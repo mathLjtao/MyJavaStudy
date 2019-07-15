@@ -1,0 +1,10 @@
+发票系统具体介绍
+1、salesOrder代表发票的主部，
+Order是抽象构件角色，
+OrderDecorator是抽象装饰角色，
+OrderLinde是一个发票的货品清单中的一行，给出产品名、产品单价、所购单位数、小计金额等。
+Order类中有一个Vetor聚集，用于存储任意多个OrderLine对象。
+HeaderDecorator提供的打印功能比被装饰的对象的打印功能更强大，它除了调用被装饰的对象的print()方法之外，
+还调用自己的私有方法printHeader（）方法，打印出发票的头部
+FooterDecorator也是一样，除了调用被装饰的对象的pring（）方法之外，还调用自己的私有方法--printFooter（），打印出发票的尾部。
+为了节省篇幅，在设计中仅给出了一个头部装饰类和一个尾部装饰类，。

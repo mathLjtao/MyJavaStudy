@@ -1,0 +1,5 @@
+JDK自带线程池的讲解：https://blog.csdn.net/zhou_fan_xi/article/details/83585104
+一、ljtao.javase.thread.threadpool.jdk_executors
+这个包里面演示的是jdk的Executor工厂类几种创建线程池的方法
+二、ljtao.javase.thread.threadpool.jdk_threadpoolexecutor
+这个包里面解析的是jdk中的ThreadPoolExecutor

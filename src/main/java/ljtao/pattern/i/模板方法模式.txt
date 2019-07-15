@@ -1,0 +1,8 @@
+https://www.cnblogs.com/zuoxiaolong/p/pattern10.html
+
+一、定义与说明
+	1、
+	二、模式例子
+	1、类加载器就是用模板模式来设计的
+	三、好处
+	1、
