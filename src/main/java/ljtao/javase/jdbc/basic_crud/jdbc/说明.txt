@@ -1,0 +1,5 @@
+JDBC实现简单增删改查：https://blog.csdn.net/qq1404510094/article/details/79137642
+自己链接：https://www.cnblogs.com/mathlin/articles/11199309.html
+一、记录jdbc的一些操作。
+二、basic包，记录简单的crud
+三、
