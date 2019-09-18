@@ -13,15 +13,17 @@ public class MainExe {
     //测试有返回值的线程
     public static void demo1() throws  Exception{
         ExecutorService es = Executors.newFixedThreadPool(5);
-        Callable c1 = new MyCallable("ljtao3");
-        Callable c2 = new ApproveCallable("approve");
-        Callable c3 = new MyCallable("curApprove");
+        Callable c1 = new MyCallable("MyCallable");
+        Callable c2 = new ApproveCallable("ApproveCallable");
         Future submit1 = es.submit(c1);
         Map<String,String> reHm1 = (Map<String,String>)submit1.get();
         System.out.println(reHm1);
         Future submit2 = es.submit(c2);
         Map<String,String> reHm2 = (Map<String,String>)submit2.get();
         System.out.println(reHm2);
+
+        //测试调用3秒后才执行完成的数据
+        Callable c3 = new MyCallable(reHm2.get("name"));
         Future submit3 = es.submit(c3);
         Map<String,String> reHm3 = (Map<String,String>)submit3.get();
         System.out.println(reHm3);

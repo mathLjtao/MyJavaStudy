@@ -1,5 +1,8 @@
 package ljtao.pattern.d_factoryMethod;
-
+/*
+可以根据类名来创建新对象。
+可以根据properties文件来设置。
+ */
 //一个抽象的创建接口
 interface Creator {
 	public Light createLight();
