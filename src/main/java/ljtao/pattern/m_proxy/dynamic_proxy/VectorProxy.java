@@ -15,9 +15,17 @@ public class VectorProxy implements InvocationHandler{
 	//静态工厂方法
 	public static Object factory(Object obj){
 		Class cls=obj.getClass();
-		
+		/*
+		InvocationHandler h ，这里对应new VectorProxy(obj)
+		动态代理在执行时，会 调用h里面的invoke方法去执行
+		 */
 		return Proxy.newProxyInstance(cls.getClassLoader(),cls.getInterfaces(),new VectorProxy(obj));
 	}
+	/*
+	proxy：就是代理对象，newProxyInstance方法的返回对象
+	method：调用的方法
+	args: 方法中的参数
+	 */
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args)
 			throws Throwable {
@@ -36,6 +44,7 @@ public class VectorProxy implements InvocationHandler{
 		v=(List)factory(new Vector(10));
 		v.add("one ");
 		v.add("two ");
+		new Vector().getClass().getInterfaces();
 		//可以用自己创建的接口跟类来测试
 	}
 	//https://www.cnblogs.com/cenyu/p/6289209.html

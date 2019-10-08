@@ -10,6 +10,8 @@ public class Test {
 		List<String> strings = Arrays.asList(s);
 		System.out.println(strings.toString());
 
+		String str="ddddd   saa   \nd";
+		System.out.println(str.replaceAll("\\s|\n",""));
 	}
 	public static void fun1(){
 		List<String> list =new ArrayList<String>();
@@ -28,5 +30,6 @@ public class Test {
 		System.out.println(systime/1000-time/1000);
 		System.out.println(sdf.format(new Date()));
 	}
+
 }
 

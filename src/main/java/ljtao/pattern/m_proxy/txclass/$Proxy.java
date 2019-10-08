@@ -1,0 +1,1 @@
+package ljtao.pattern.m_proxy.txclass;import ljtao.pattern.m_proxy.txclass.UserDao;public class $Proxy implements UserDao{private UserDao target;public $Proxy(UserDao target){this.target=target;}public void print(String p1){System.out.println("log....");target.print( p1);}}
