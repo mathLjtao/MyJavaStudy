@@ -2,6 +2,7 @@ package ljtao.pattern.a_singleton;
 
 public class Singleton {
 	private Singleton() {
+		System.out.println("该单例对象要运行的代码");
 		Test test=new Test();
 	}
 	//用到的时候才加载
