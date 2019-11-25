@@ -1,4 +1,4 @@
-package ljtao.algorithms.type;
+package ljtao.algorithms.type.dynamic_programming;
 
 /*
     动态规划
@@ -54,4 +54,5 @@ public class C_动态规划 {
         }
         return myMeno[n];
     }
+
 }

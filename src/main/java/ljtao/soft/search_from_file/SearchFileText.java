@@ -21,7 +21,7 @@ public class SearchFileText {
         //只支持记事本能打开不乱码的文件
         //setCond("D:\\工作日记\\2019年\\OA新通用移动模板\\work",".php","edit.php");
         //setCond("D:\\工作日记\\2019年\\OA新通用移动模板\\work","[all]","edit.php");
-        setCond("D:\\test\\ljtao\\test1","[all]","四");
+        setCond("D:\\grgprojectwork\\GRG.ApplicationPortal","[all]","55624");
 
 
     }
