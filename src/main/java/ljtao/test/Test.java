@@ -30,6 +30,21 @@ public class Test {
 		System.out.println(systime/1000-time/1000);
 		System.out.println(sdf.format(new Date()));
 	}
+	/**
+	 * 测试通配符上下限
+	 */
+	public static void fun3(){
+		List<? super A2> list= new ArrayList<>();
+		list.add(new A2());
+		list.add(new A3());
+
+
+		List<? extends A2> list1=new ArrayList<>();
+		//list1.add(new A1());
+		//list1.add(new A2());
+		//list1.add(new A3());
+
+	}
 
 }
 
