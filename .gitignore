@@ -1,2 +1,5 @@
-
+.idea
 *.class
+target
+.idea\vcs.xml
+idea\workspace.xml
