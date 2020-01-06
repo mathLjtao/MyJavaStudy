@@ -43,7 +43,7 @@ public class Test {
 		//list1.add(new A1());
 		//list1.add(new A2());
 		//list1.add(new A3());
-
+		Objects.requireNonNull("a");
 	}
 
 }
