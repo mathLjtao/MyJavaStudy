@@ -1,5 +1,5 @@
 package ljtao.book_study.effective_java.source_code.chapter5.item29.technqiue1;
-import effectivejava.chapter5.item29.EmptyStackException;
+import ljtao.book_study.effective_java.source_code.chapter5.item29.EmptyStackException;
 
 import java.util.Arrays;
 

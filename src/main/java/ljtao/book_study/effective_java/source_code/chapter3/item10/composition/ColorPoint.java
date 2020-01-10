@@ -1,7 +1,7 @@
 package ljtao.book_study.effective_java.source_code.chapter3.item10.composition;
 
-import effectivejava.chapter3.item10.Color;
-import effectivejava.chapter3.item10.Point;
+import ljtao.book_study.effective_java.source_code.chapter3.item10.Color;
+import ljtao.book_study.effective_java.source_code.chapter3.item10.Point;
 
 import java.util.Objects;
 

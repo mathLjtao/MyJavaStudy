@@ -1,5 +1,5 @@
 package ljtao.book_study.effective_java.source_code.chapter6.item39.annotationwithparameter;
-import effectivejava.chapter6.item39.annotationwithparameter.ExceptionTest;
+import ljtao.book_study.effective_java.source_code.chapter6.item39.annotationwithparameter.ExceptionTest;
 
 // Program containing annotations with a parameter (Page 183)
 public class Sample2 {

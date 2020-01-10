@@ -1,5 +1,8 @@
 package ljtao.test;
 
+/**
+ *
+ */
 public class TestDemo {
     public static void main(String[] args) {
         TestDemo td1=new TestDemo();
@@ -10,5 +13,6 @@ public class TestDemo {
         System.out.println("td2.toString():"+td2.toString());
         System.out.println("td1.hashCode():"+td1.hashCode());
         System.out.println("td2.hashCode():"+td2.hashCode());
+
     }
 }

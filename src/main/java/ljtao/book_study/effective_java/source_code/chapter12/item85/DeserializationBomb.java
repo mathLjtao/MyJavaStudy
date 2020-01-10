@@ -1,5 +1,5 @@
 package ljtao.book_study.effective_java.source_code.chapter12.item85;
-import static effectivejava.chapter12.Util.*;
+import static ljtao.book_study.effective_java.source_code.chapter12.Util.*;
 
 import java.util.HashSet;
 import java.util.Set;

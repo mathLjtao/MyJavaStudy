@@ -1,7 +1,7 @@
 package ljtao.book_study.effective_java.source_code.chapter5.item29.technqiue2;
 
 import java.util.Arrays;
-import effectivejava.chapter5.item29.EmptyStackException;
+import ljtao.book_study.effective_java.source_code.chapter5.item29.EmptyStackException;
 
 // Generic stack using Object[] (Pages 130-3)
 public class Stack<E> {

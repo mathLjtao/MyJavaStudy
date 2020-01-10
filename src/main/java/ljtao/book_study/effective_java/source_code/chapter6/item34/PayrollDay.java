@@ -1,6 +1,6 @@
 package ljtao.book_study.effective_java.source_code.chapter6.item34;
 
-import static effectivejava.chapter6.item34.PayrollDay.PayType.*;
+import static ljtao.book_study.effective_java.source_code.chapter6.item34.PayrollDay.PayType.*;
 import static ljtao.book_study.effective_java.source_code.chapter6.item34.PayrollDay.PayType.WEEKDAY;
 import static ljtao.book_study.effective_java.source_code.chapter6.item34.PayrollDay.PayType.WEEKEND;
 

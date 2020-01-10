@@ -1,6 +1,6 @@
 package ljtao.book_study.effective_java.source_code.chapter6.item39.repeatableannotation;
 
-import effectivejava.chapter6.item39.markerannotation.Test;
+import ljtao.book_study.effective_java.source_code.chapter6.item39.markerannotation.Test;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
