@@ -25,7 +25,7 @@ public class Test {
 		Date date=new Date(new Long("1553070078000"));
 		//Date date=new Date(new Long("1552950001000"));
 		System.out.println(sdf.format(1553070078000L));
-		Long systime = new Date().getTime();
+		Long systime = System.currentTimeMillis();
 		Long time= new Long("1553070078000");
 		System.out.println(systime/1000-time/1000);
 		System.out.println(sdf.format(new Date()));
@@ -43,6 +43,7 @@ public class Test {
 		//list1.add(new A1());
 		//list1.add(new A2());
 		//list1.add(new A3());
+		Objects.requireNonNull("a");
 
 	}
 
