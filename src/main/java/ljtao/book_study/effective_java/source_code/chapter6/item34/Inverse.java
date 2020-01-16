@@ -14,6 +14,7 @@ public class Inverse {
     }
 
     public static void main(String[] args) {
+        args =new String[]{"12","13"};
         double x = Double.parseDouble(args[0]);
         double y = Double.parseDouble(args[1]);
         for (Operation op : Operation.values()) {

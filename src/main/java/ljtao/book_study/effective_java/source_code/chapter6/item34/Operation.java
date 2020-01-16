@@ -7,15 +7,19 @@ import static java.util.stream.Collectors.toMap;
 // Enum type with constant-specific class bodies and data (Pages 163-4)
 public enum Operation {
     PLUS("+") {
+        @Override
         public double apply(double x, double y) { return x + y; }
     },
     MINUS("-") {
+        @Override
         public double apply(double x, double y) { return x - y; }
     },
     TIMES("*") {
+        @Override
         public double apply(double x, double y) { return x * y; }
     },
     DIVIDE("/") {
+        @Override
         public double apply(double x, double y) { return x / y; }
     };
 
@@ -38,10 +42,13 @@ public enum Operation {
     }
 
     public static void main(String[] args) {
+        args =new String[]{"12","13"};
         double x = Double.parseDouble(args[0]);
         double y = Double.parseDouble(args[1]);
-        for (Operation op : Operation.values())
+        for (Operation op : Operation.values()) {
             System.out.printf("%f %s %f = %f%n",
                     x, op, y, op.apply(x, y));
+
+        }
     }
 }

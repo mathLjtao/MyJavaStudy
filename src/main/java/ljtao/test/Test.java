@@ -2,6 +2,7 @@ package ljtao.test;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class Test {
 	public static void main(String[] args) {
@@ -12,6 +13,7 @@ public class Test {
 
 		String str="ddddd   saa   \nd";
 		System.out.println(str.replaceAll("\\s|\n",""));
+
 	}
 	public static void fun1(){
 		List<String> list =new ArrayList<String>();
