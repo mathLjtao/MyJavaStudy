@@ -1,9 +1,24 @@
 package ljtao.dataStructure.list;
 
 
+import java.util.Queue;
+import java.util.Stack;
+
 public class MyTest {
 	public static void main(String[] args) throws Exception {
-		demo2();
+		demo6();
+	}
+	//测试改善后LinkQueue
+	public static void demo6(){
+		LinkQueue lq=new LinkQueue();
+		lq.add2("i:1");
+		lq.add2("i:2");
+		lq.add2("i:3");
+		//System.out.println(lq.size());
+		System.out.println(lq.pop());
+		System.out.println(lq.pop());
+		System.out.println(lq.pop());
+
 	}
 	//测试自制queue
 	public static void demo5() throws Exception{

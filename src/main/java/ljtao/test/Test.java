@@ -1,19 +1,31 @@
 package ljtao.test;
 
+import org.assertj.core.util.Lists;
+
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.IntStream;
 
 public class Test {
 	public static void main(String[] args) {
-		//fun1();
-		String[] s=new String[]{"a","b","c"};
-		List<String> strings = Arrays.asList(s);
-		System.out.println(strings.toString());
+		fun4();
 
-		String str="ddddd   saa   \nd";
-		System.out.println(str.replaceAll("\\s|\n",""));
-
+		new ThreadLocal<String>().set("hhh");
+	}
+	//public static native void arraycopy(Object src,  int  srcPos,Object dest, int destPos,int length);
+	//测试System类中这个方法
+	public static void  fun4(){
+		String[] str1=new String[]{"a1","b1","c1"};
+		String[] str2=new String[]{"a","b","c","d","e","f"};
+		System.arraycopy(str1,0,str2,0,str1.length);
+		if(str2.length>str1.length){
+			str2[str1.length]=null;
+		}
+		for (int i = 0; i < str2.length; i++) {
+			System.out.println(str2[i]);
+		}
+		System.out.println(str1);
 	}
 	public static void fun1(){
 		List<String> list =new ArrayList<String>();
