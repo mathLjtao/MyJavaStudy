@@ -21,5 +21,11 @@ public class Main {
 		//取得call()的返回值
 		//如果此时call()方法没有执行完成，则依然会等待
 		System.out.println("数据="+ft.get());
+
+		//不用线程池方式得执行
+		FutureTask<String> ft2=new FutureTask<>(new RealData("b"));
+		new Thread(ft2).start();
+		System.out.println("Threadf方式，数据："+ft2.get());
+
 	}
 }
