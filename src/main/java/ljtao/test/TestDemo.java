@@ -14,5 +14,6 @@ public class TestDemo {
         System.out.println("td1.hashCode():"+td1.hashCode());
         System.out.println("td2.hashCode():"+td2.hashCode());
 
+        short s=1;
     }
 }

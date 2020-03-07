@@ -12,7 +12,7 @@ public class ThreadLocalCode {
 
     其实可以成JDK底层中有一个Map，这个Map为<Thread,T>类型,每个线程拿到自己的值
 
-    局部变量：是指在每个线程中自己设置的局部变量。
+    局部变量：是指在每个方法中自己创建设置的局部变量，只在方法中传递。
     封闭在线程中。它位于执行线程的栈中，其他线程无法访问这个栈。
      */
     public static ThreadLocal<String> threadLocal=new ThreadLocal<>();
