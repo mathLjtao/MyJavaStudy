@@ -1,5 +1,7 @@
 package ljtao.javase.thread.skill;
 
+import java.math.BigDecimal;
+
 /**
  * 记录关于线程的一些优化技巧
  * @author ljtao3 on 2020/3/6
