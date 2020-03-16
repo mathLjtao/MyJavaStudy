@@ -60,12 +60,7 @@ public class Test {
 		Objects.requireNonNull("a");
 
 	}
-	/*
-		中职信试题
-	 */
-	public static void fun5(){
-		System.err.println();
-	}
+
 
 }
 
