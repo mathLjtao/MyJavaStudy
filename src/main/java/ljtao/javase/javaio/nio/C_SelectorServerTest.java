@@ -19,7 +19,7 @@ public class C_SelectorServerTest {
         this.selector=Selector.open();
         serverChannel=ServerSocketChannel.open();
         serverChannel.socket().bind(new InetSocketAddress(9010));
-        serverChannel.configureBlocking(false);
+        serverChannel.configureBlocking(false);//设置非阻塞
         serverChannel.register(this.selector, SelectionKey.OP_ACCEPT);
 
     }
@@ -40,6 +40,7 @@ public class C_SelectorServerTest {
                     serverChannel = (ServerSocketChannel)key.channel();
                     SocketChannel sc=serverChannel.accept();
                     sc.configureBlocking(false);
+                    System.out.println("收到新连接："+sc.getRemoteAddress());
                     sc.write(ByteBuffer.wrap("hello client.".getBytes()));
                     sc.register(this.selector,SelectionKey.OP_READ);
                 }

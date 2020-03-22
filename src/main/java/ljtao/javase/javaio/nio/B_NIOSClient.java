@@ -79,7 +79,7 @@ public class B_NIOSClient {
                 sBuffer.put((new Date() + " connected!").getBytes());
                 sBuffer.flip();
                 client.write(sBuffer);//发送信息至服务器
-                /* 原文来自站长网
+                /*
                  * 启动线程一直监听客户端输入，有信息输入则发往服务器端
                  * 因为输入流是阻塞的，所以单独线程监听
                  */

@@ -1,12 +1,15 @@
 package ljtao.javase.thread.callable.ex1_simple;
 
+import ljtao.javase.thread.callable.ex2.MyFutureTask;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.*;
 
 public class MainExe {
     public static void main(String[] args) throws  Exception{
-        demo2();
+        //demo2();
+        demo3();
     }
     //测试有返回值的线程
     public static void demo1() throws  Exception{
@@ -45,6 +48,30 @@ public class MainExe {
 
         System.out.println(futureTask1.get());//会等待任务执行结束
         System.out.println(futureTask2.get());
+
+    }
+    //使用自己写的FutureTask
+    public static void demo3() throws Exception {
+        Callable c1 = new MyCallable("MyCallable1");
+        MyFutureTask<Map<String,String>> myFutureTask1=new MyFutureTask<Map<String,String>>(c1);
+        new Thread(myFutureTask1).start();
+
+
+        Callable c2 = new MyCallable("MyCallable2");
+        MyFutureTask<Map<String,String>> myFutureTask2=new MyFutureTask<Map<String,String>>(c2);
+        new Thread(myFutureTask2).start();
+
+
+        new Thread(()->{
+            try {
+                System.out.println(myFutureTask2.get());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+        System.out.println(myFutureTask1.get());
+        System.out.println(myFutureTask2.get());
+
 
     }
 }
