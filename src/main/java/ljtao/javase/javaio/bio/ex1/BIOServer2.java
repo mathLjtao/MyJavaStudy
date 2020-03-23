@@ -1,4 +1,4 @@
-package ljtao.javase.javaio.bio;
+package ljtao.javase.javaio.bio.ex1;
 
 import java.io.*;
 import java.net.ServerSocket;
