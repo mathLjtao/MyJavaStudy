@@ -1,3 +1,8 @@
 记录一些用java实现的功能
 一、LotteryDrawDemo
 抽选幸运用户。
+二、MoneyUtil
+处理金额使用的，使数值更精确，不会“失真”
+三、search_from_file文件
+1、搜索指定文件。
+2、搜索文件中的指定内容。

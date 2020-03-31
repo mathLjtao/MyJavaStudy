@@ -49,8 +49,6 @@ public class ApplicationContext {
                                 proxyBeanMap.put(targeObj.getClass().getSimpleName().toLowerCase(),proxyObject);
                             }
                         }
-
-
                     }
                 }
             }

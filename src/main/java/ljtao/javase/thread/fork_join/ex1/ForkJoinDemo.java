@@ -50,6 +50,7 @@ class HttpJsonRequest extends RecursiveTask<JSONObject>{
     //就是实际去执行的一个方法入口。（任务拆分）
     @Override
     protected JSONObject compute() {
+
         int count=end-start;//代表当前这个task需要处理多少数据
         if(count==0){
             //这里输出线程的名称，可以看到是不同的线程在执行拆封的任务
