@@ -5,4 +5,4 @@
 一、讲解注解：https://blog.csdn.net/qq1404510094/article/details/80577555
 二、ex1包，主要写的是检查NoBug类中带有@jiancha注解的方法是否有bug
 三、ex2包，获取使用的注解的变量值。
-
+四、ex3包，通过自定义的注解，为有自定义注解的某个类加上get,set方法。类似lombok框架的实现功能。
