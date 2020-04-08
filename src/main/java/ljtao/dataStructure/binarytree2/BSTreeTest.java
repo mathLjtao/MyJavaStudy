@@ -3,7 +3,7 @@ package ljtao.dataStructure.binarytree2;
 public class BSTreeTest {
 
     public static BSTree<Integer> newTree() {
-        int[] array = new int[]{50, 30};
+        int[] array = new int[]{50, 30,60,70,80,90};
         BSTree<Integer> tree = new BSTree<>();
         for (int i = 0; i < array.length; i++) {
             tree.insert(array[i]);
@@ -12,14 +12,30 @@ public class BSTreeTest {
     }
 
     public static void main(String[] args) {
+        fun2();
+    }
+    /*
+    测试树的高度
+     */
+    public static void fun2(){
+        BSTree<Integer> tree = newTree();
+        print(tree);
+        System.out.println("树的最大深度："+tree.maxHeight());
+        System.out.println("树的最小深度："+tree.minHeight());
+    }
+
+    /*
+    测试删除节点
+     */
+    public static void fun1(){
         BSTree<Integer> tree = newTree();
         System.out.println("----------初始--------");
-       // print(tree);
-       // tree.delete(20);
+        // print(tree);
+        // tree.delete(20);
         System.out.println("----------删除 20--------");
-       // print(tree);
+        // print(tree);
         tree = newTree();
-       // tree.delete(70);
+        // tree.delete(70);
         System.out.println("----------删除 70--------");
         print(tree);
         tree = newTree();

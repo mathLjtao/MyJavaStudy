@@ -81,6 +81,41 @@ public class BSTree<T extends Comparable<T>> {
         postOrder(mRoot);
     }
 
+    /*
+    返回树的最大高度
+     */
+    private int maxHeight(BSTNode node,int height){
+        if (node!=null){
+            height=Math.max(maxHeight(node.left,height),maxHeight(node.right,height))+1;
+        }
+        return height;
+    }
+    public int maxHeight(){
+        return maxHeight(mRoot,0);
+    }
+
+    /*
+    返回树的最小深度，
+    1、节点无子节点时，返回 1
+    2、节点有左节点，无右节点时，返回左节点最小深度+1.
+    3、节点有右节点，无左节点时，返回右节点最小深度+1,
+    4、节点有左、右节点时，返回min(左节点最小深度，右节点最小深度)+1
+     */
+    private int minHeight(BSTNode node){
+        if(node==null){
+            return 0;
+        }
+        if(node.left==null){
+            return minHeight(node.right)+1;
+        }
+        if(node.right==null){
+            return minHeight(node.left)+1;
+        }
+        return Math.min(minHeight(node.right),minHeight(node.left))+1;
+    }
+    public int minHeight(){
+        return minHeight(mRoot);
+    }
 
     /*
      * (递归实现)查找"二叉树x"中键值为key的节点
