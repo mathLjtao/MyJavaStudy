@@ -3,7 +3,7 @@ package ljtao.dataStructure.binarytree2;
 public class BSTreeTest {
 
     public static BSTree<Integer> newTree() {
-        int[] array = new int[]{50, 30,60,70,80,90};
+        int[] array = new int[]{50, 30,60,70,80,90,20,40,15,25,35,45};
         BSTree<Integer> tree = new BSTree<>();
         for (int i = 0; i < array.length; i++) {
             tree.insert(array[i]);
@@ -12,7 +12,18 @@ public class BSTreeTest {
     }
 
     public static void main(String[] args) {
-        fun2();
+        fun3();
+    }
+    /*
+    前中后序遍历
+     */
+    public static void fun3(){
+        BSTree<Integer> tree = newTree();
+        tree.preOrder();
+        System.out.println();
+        tree.inOrder();
+        System.out.println();
+        tree.postOrder();
     }
     /*
     测试树的高度
