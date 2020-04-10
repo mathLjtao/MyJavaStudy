@@ -9,6 +9,10 @@ public class Test {
     public static void main(String[] args) {
 
     }
+
+    public static void fun2(){
+
+    }
     public static void fun1(){
         //一个点，表示当前目录，两个. 表示上级目录
         File[] files = new File(".").listFiles();
