@@ -34,6 +34,9 @@ public class FilteringApples {
         List<Apple> list4 = FilteringApples.filter(inventory, (Apple a)->"red".equals(a.getColor()));
         System.out.println(list4);
 
+        //可以这样
+        ApplePredicate applePredicate=(Apple a)->"greed".equals(a.getColor());
+
     }
     //体现了策略模式,想根据什么筛选就传递什么实现类
     public static List<Apple> filter(List<Apple> inventory ,ApplePredicate applePredicate){

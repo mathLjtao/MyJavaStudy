@@ -5,7 +5,7 @@ package ljtao.interview;
  * @date 2020/3/13
  * 面试中职信（广东）
  */
-public class view01 {
+public class View01 {
     public static void main(String[] args) {
         fun2();
     }
@@ -61,7 +61,7 @@ public class view01 {
         System.out.println(12-11.9==0.1);//false
         System.out.println();
 
-        View view=new view01().new View();
+        View view=new View01().new View();
         view.method1(null);//string
         view.method2(12-11.9);//class java.lang.Double
 
