@@ -5,6 +5,11 @@ import ljtao.book_study.java8Action.mycode.chapter04.Dish;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.*;
 
 /**
  * @author ljtao
@@ -24,9 +29,37 @@ public class UseMethod {
             new Dish("prawns", false, 300, Dish.Type.FISH),
             new Dish("salmon", false, 450, Dish.Type.FISH) );
     public static void main(String[] args) {
+        //fun0();
+        fun01();
         //fun2();
-        fun3();
+        //fun3();
     }
+    /*
+        流的映射
+     */
+    //返回菜单名字的长度
+    public static void fun0(){
+        List<Integer> collect = menu.stream().map(dish -> dish.getName().length()).collect(toList());
+        System.out.println(collect);
+    }
+    //对于一张单词表，如何返回一张列表，列出里面 各不相同的字符
+    //例如，给定单词列表["Hello","World"]，你想要返回列表["H","e","l", "o","W","r","d"]。
+    //使用flatMap，flatMap方法就是把一个流中的每个值都换成另一个流，然后把所有的流连接起来成为一个流
+    public static void fun01(){
+        //这里也展示 map 跟 flatMap 产生不同的结果
+        List<String> list = Arrays.asList("Hello", "World");
+        Stream<String[]> stream = list.stream().map(s -> s.split(""));
+        System.out.println(stream.collect(toList()));
+
+        Stream<Stream<String>> streamStream = list.stream().map(s -> s.split("")).map(Arrays::stream);//将每个数组变成一个单独的流
+        System.out.println(streamStream.collect(toList()));//多个字符串流
+
+        //正确解法  利用flatMap  将多个流合并成一个字符串流
+        Stream<String> stringStream = list.stream().map(s -> s.split("")).flatMap(Arrays::stream);
+        //Stream<String> stringStream = list.stream().map(s -> s.split("")).flatMap(stram -> Arrays.stream(stram));
+        stringStream.collect(toList()).forEach(System.out::print);
+    }
+
 
     /**
      * 查找和匹配
@@ -96,6 +129,30 @@ public class UseMethod {
         System.out.println(r5);//0
 
     }
-
+    /*
+    数值流
+     */
+    //原始类型流特化
+    public static void fun4(){
+        //使用mapToInt，不用map是为了避免装箱操作，同样的还有mapToLong,mapToDouble
+        IntStream intStream = menu.stream().mapToInt(m -> m.getCalories());
+        intStream.sum();//求和
+    }
+    //数值范围
+    public static void fun5(){
+        IntStream.rangeClosed(1,50);//产生1-50的数值流
+        IntStream.range(1,50);//产生1-49的数值流
+    }
+    //得出勾股定理的数值
+    public static void fun6(){
+        //先生成所有的三元数（a*a,b*b,a*a+b*b）
+        Stream<double[]> pythagoreanTriples2 =
+                IntStream.rangeClosed(1, 100).boxed()
+                        .flatMap(a ->
+                                IntStream.rangeClosed(a, 100)
+                                        .mapToObj(
+                                                b -> new double[]{a, b, Math.sqrt(a*a + b*b)})
+                                        .filter(t -> t[2] % 1 == 0));
+    }
 
 }

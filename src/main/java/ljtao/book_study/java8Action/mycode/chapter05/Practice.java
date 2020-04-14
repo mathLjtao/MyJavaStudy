@@ -32,9 +32,9 @@ public class Practice {
         //fun3();
         //fun4();
         //fun5();
-        //fun6();
+        fun6();
         //fun7();
-        fun8();
+        //fun8();
     }
     //找出2011年发生的所有交易，并按交易额排序（从低到高）。
     static void  fun1(){
@@ -104,9 +104,9 @@ public class Practice {
     }
     //(6) 打印生活在剑桥的交易员的所有交易额。
     static void  fun6(){
-        long count = transactions.stream().filter(transaction -> "Cambridge".equals(transaction.getTrader().getCity()))
-                .map(transaction -> transaction.getValue()).count();
-        System.out.println(count);
+        transactions.stream().filter(transaction -> "Cambridge".equals(transaction.getTrader().getCity()))
+                .map(transaction -> transaction.getValue()).forEach(System.out::println);
+
     }
 
     //(7) 所有交易中，最高的交易额是多少？
@@ -122,15 +122,4 @@ public class Practice {
         System.out.println(transaction);
     }
 
-    /*
-
-
-
-
-
-
-
-
-
-     */
 }
