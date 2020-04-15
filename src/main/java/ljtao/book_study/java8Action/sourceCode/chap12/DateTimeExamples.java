@@ -121,27 +121,28 @@ public class DateTimeExamples {
         });
         System.out.println(date);
     }
-
+    //该类实现了TemporalAdjuster接口，能够计算明天的日期，同时过滤掉周六和周日这些节假日
     private static class NextWorkingDay implements TemporalAdjuster {
         @Override
         public Temporal adjustInto(Temporal temporal) {
             DayOfWeek dow = DayOfWeek.of(temporal.get(ChronoField.DAY_OF_WEEK));
             int dayToAdd = 1;
-            if (dow == DayOfWeek.FRIDAY) dayToAdd = 3;
+            if (dow == DayOfWeek.FRIDAY) dayToAdd = 3;//如果当天是周五，增加3天
             if (dow == DayOfWeek.SATURDAY) dayToAdd = 2;
             return temporal.plus(dayToAdd, ChronoUnit.DAYS);
         }
     }
-
+    //和老的java.util.DateFormat相比较，所有的DateTimeFormatter实例都是线程安全的。
     private static void useDateFormatter() {
         LocalDate date = LocalDate.of(2014, 3, 18);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter italianFormatter = DateTimeFormatter.ofPattern("d. MMMM yyyy", Locale.ITALIAN);
 
         System.out.println(date.format(DateTimeFormatter.ISO_LOCAL_DATE));
-        System.out.println(date.format(formatter));
-        System.out.println(date.format(italianFormatter));
+        System.out.println(date.format(formatter));//18/03/2014
+        System.out.println(date.format(italianFormatter));//18. marzo 2014
 
+        //地构造自己的格式器
         DateTimeFormatter complexFormatter = new DateTimeFormatterBuilder()
                 .appendText(ChronoField.DAY_OF_MONTH)
                 .appendLiteral(". ")
@@ -151,7 +152,7 @@ public class DateTimeExamples {
                 .parseCaseInsensitive()
                 .toFormatter(Locale.ITALIAN);
 
-        System.out.println(date.format(complexFormatter));
+        System.out.println(date.format(complexFormatter));//18. marzo 2014
     }
 
 }
