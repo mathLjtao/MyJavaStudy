@@ -62,15 +62,44 @@ public class MainExe {
         new Thread(myFutureTask2).start();
 
 
+        MyFutureTask<Map<String,String>> myFutureTask3=new MyFutureTask<Map<String,String>>(()->{
+            Map<String,String> reHm=new HashMap<>();
+            reHm.put("a","table3");
+            Thread.sleep(3000);
+            return reHm;
+        });
+        new Thread(myFutureTask3).start();
+
+
         new Thread(()->{
             try {
+                System.out.println(myFutureTask2.get());
                 System.out.println(myFutureTask2.get());
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }).start();
-        System.out.println(myFutureTask1.get());
-        System.out.println(myFutureTask2.get());
+
+
+        new Thread(()->{
+            try {
+                System.out.println(myFutureTask3.get());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+
+        new Thread(()->{
+            try {
+                System.out.println(myFutureTask3.get());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+
+        //System.out.println(myFutureTask1.get());
+        //System.out.println(myFutureTask2.get());
+
 
 
     }

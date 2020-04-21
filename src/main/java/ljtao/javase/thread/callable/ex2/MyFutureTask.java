@@ -42,9 +42,13 @@ public class MyFutureTask<T> implements Runnable, Future {
             return result;
         }
         else {
-            workQueue.put(Thread.currentThread());//如果结果还没出来，加入到等待队列，线程不往下执行
             while (!"end".equals(status)){
                 System.out.println(Thread.currentThread().getName());
+                //TODO 这里还需要加上代码。判断，队列有没有这个线程，没有的话要加上.这样严谨一点
+                if(!workQueue.contains(Thread.currentThread())){
+                    workQueue.put(Thread.currentThread());//如果结果还没出来，加入到等待队列，线程不往下执行
+                    System.out.println(workQueue.size());
+                }
                 LockSupport.park();
             }
         }
