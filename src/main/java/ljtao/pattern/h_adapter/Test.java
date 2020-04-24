@@ -2,7 +2,7 @@ package ljtao.pattern.h_adapter;
 
 public class Test {
 	public static void main(String[] args) {
-		demo2();
+		demo3();
 	}
 	//演示类设配器
 	public static  void demo1(){
@@ -16,4 +16,13 @@ public class Test {
 		t.simpleDemo1();
 		t.simpleDemo2();
 	}
+
+	//
+	public static void demo3(){
+		Adaptee t=new Adapter();
+		t.change();
+		t.simpleDemo3("ch");
+		t.change();
+	}
+
 }
