@@ -11,7 +11,7 @@ public class Test {
 	public static void main(String[] args) {
 		fun4();
 		Object obj=new Object();
-		//new ThreadLocal<String>().set("hhh");
+		new ThreadLocal<String>().set("hhh");
 	}
 	//public static native void arraycopy(Object src,  int  srcPos,Object dest, int destPos,int length);
 	//测试System类中这个方法
