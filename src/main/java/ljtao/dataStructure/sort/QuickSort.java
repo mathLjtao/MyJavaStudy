@@ -10,7 +10,7 @@ public class QuickSort {
     public static void main(String[] args) {
         //int[] arr={5,2,4,3,7,1,8,6};
         //int[] arr={2,2};
-        int[] arr={6,6,6,5,6,6,6,6,5};
+        int[] arr={6,6,6,5,6,6,6,6,5,6};
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -25,7 +25,11 @@ public class QuickSort {
         int middle=start;
         int last=end;
         while(end>start){
-            //从尾部开始
+            /*
+            从尾部开始。
+            因为找到的数要跟第一个位置交换，如果从左边先找，就会找到比第一个数大的位置停下，后面交换过去就不符合逻辑。
+            所以要从右边开始，找到比第一个数小的位置先停下。
+             */
             while(arr[middle]<arr[end] && start<end){
                 --end;
             }
