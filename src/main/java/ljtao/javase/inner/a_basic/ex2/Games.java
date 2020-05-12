@@ -4,6 +4,7 @@ import javax.swing.plaf.synth.SynthScrollBarUI;
 
 /**
  * @author ljtao3 on 2020/5/8
+ * Java编程思想中的例子。（内部类章节）
  */
 interface Game{ boolean move();}
 interface GameFactory{Game getGame();}

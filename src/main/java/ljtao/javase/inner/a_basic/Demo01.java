@@ -2,6 +2,7 @@ package ljtao.javase.inner.a_basic;
 
 /**
  * @author ljtao3 on 2020/5/8
+ * Java编程思想中的例子。（内部类章节）
  */
 public class Demo01 {
     private String name="ljtao";

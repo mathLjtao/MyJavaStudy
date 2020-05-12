@@ -18,7 +18,7 @@ public class A01_ExceptionExample {
 	public static void fun1(String s) throws Exception{
 		String str="abc";
 		if(!str.equals(s)){
-			throw new Exception("两字符串不相等！");
+			throw new MyException("两字符串不相等！");
 		}
 		else{
 			System.out.println("相等");
