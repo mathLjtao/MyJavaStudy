@@ -11,7 +11,12 @@ import java.util.concurrent.TimeUnit;
 public class Test {
 	public static void main(String[] args) {
 		List<String> list = Collections.synchronizedList(new ArrayList<String>());
-		demo1();
+		demo2();
+	}
+	static void demo2(){
+		MyThread mt=new MyThread("a");
+		new Thread(mt).start();
+		new Thread(mt).start();
 	}
 	/*
 	 * 测试一个 （线程池的线程被占满了），线程池（ExecutorService）会 先执行优先级较高的线程任务。

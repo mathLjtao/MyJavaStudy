@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ljtao.book_study.JavaConcurrencyInPractice.my_code.RoleMapper">
+    <select id="queryUserBySchoolName" resultType="ljtao.book_study.mybatisSourceCode.my.User">
+        SELECT * FROM `sys_user`
+        <if test="userName != null">
+            WHERE user_Name = #{userName}
+        </if>
+    </select>
+</mapper>

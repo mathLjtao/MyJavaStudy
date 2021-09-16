@@ -1,6 +1,7 @@
 package ljtao.soft;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 
@@ -116,7 +117,8 @@ public class MoneyUtil {
      * @return
      */
     public static BigDecimal moneydiv(BigDecimal value,BigDecimal divideValue){
-        return value.divide(divideValue, 2, BigDecimal.ROUND_HALF_UP);
+        // return value.divide(divideValue, 2, BigDecimal.ROUND_HALF_UP);
+        return value.divide(divideValue, 2, RoundingMode.HALF_UP);
     }
 
 

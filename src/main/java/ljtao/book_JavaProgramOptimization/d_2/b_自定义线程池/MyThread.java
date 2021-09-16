@@ -2,6 +2,7 @@ package ljtao.book_JavaProgramOptimization.d_2.b_自定义线程池;
 
 public class MyThread implements Runnable ,Comparable<MyThread>{
 	protected String name;
+	private volatile int i=5;
 	public MyThread(){}
 	public MyThread(String name){
 		this.name=name;
@@ -11,6 +12,11 @@ public class MyThread implements Runnable ,Comparable<MyThread>{
 		try {
 			Thread.sleep(1000);
 			System.out.println(name+" ");
+			while (i!=0){
+				System.out.println(i);
+				i--;
+				Thread.sleep(1000);
+			}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

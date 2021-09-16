@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ljtao.book_study.mybatisSourceCode.my.UserMapper">
+
+    <!--    #{userName,javaType=String,jdbcType=VARCHAR}-->
+    <select id="queryUserBySchoolName" resultType="ljtao.book_study.mybatisSourceCode.my.User">
+        SELECT * FROM `sys_user`
+        WHERE user_Name = #{userName,javaType=String,jdbcType=VARCHAR}
+    </select>
+
+
+    <insert id="addUser" parameterType="user" useGeneratedKeys="true" keyProperty="userId" keyColumn="USER_ID">
+        INSERT  INTO `sys_user`  (`user_code`,`user_name`)
+        value (#{userCode},#{userName})
+    </insert>
+
+    <insert id="addUser_b" parameterType="user" >
+        <selectKey resultType="java.lang.Long"  keyProperty="userId" order="BEFORE">
+            select max(user_id)+1 from sys_user
+        </selectKey>
+        INSERT  INTO `sys_user`  (`user_id`,`user_code`,`user_name`)
+        value (#{userId},#{userCode},#{userName})
+    </insert>
+</mapper>

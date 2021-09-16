@@ -1,18 +1,38 @@
 package ljtao.test;
 
-import org.assertj.core.util.Lists;
-
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.IntStream;
 
 public class Test {
 	public static void main(String[] args) {
-		fun4();
+		Long l1=100L;
+		Long l2=100L;
+		if(l1.equals(l2) ){
+
+		}
+		fun6();
 		Object obj=new Object();
 		new ThreadLocal<String>().set("hhh");
 	}
+	public static void fun6(){
+		HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+		//如果缺值了，才会插入
+		// objectObjectHashMap.putIfAbsent();
+		// objectObjectHashMap.put()
+	}
+	//测试A、B、C、累加
+	public static void fun5() {
+		String s="1";
+		char ch=s.charAt(0);
+		System.out.println(ch);
+		System.out.println(ch+1);
+		System.out.println();
+		char a = (char)(ch+1);
+		System.out.println(a);
+
+
+	}
+
 	//public static native void arraycopy(Object src,  int  srcPos,Object dest, int destPos,int length);
 	//测试System类中这个方法
 	public static void  fun4(){
